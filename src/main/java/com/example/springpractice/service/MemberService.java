@@ -8,9 +8,13 @@ import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRespository();
+    private final MemberRepository memberRepository;
 
-        //회원가입
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+    //회원가입
         public long join(Member member) {
             //비즈니스 로직중에 같은 이름이 있는 중복 회원X
             validateDuplicateMember(member);    //중복 회원 검증
