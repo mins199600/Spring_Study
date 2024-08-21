@@ -19,12 +19,10 @@ class MemberServiceTest {
 
     }
 
-
     @AfterEach
     public void afterEach() {
         memberRespository.clearStore();
     }
-
 
     @Test
     //회원가입 서비스 테스트 : 정상
@@ -54,7 +52,6 @@ class MemberServiceTest {
         //when : 이걸 실행했을때
         memberService.join(member1);
         assertThrows(IllegalStateException.class, () -> memberService.join(member2));
-
     }
 
     @Test

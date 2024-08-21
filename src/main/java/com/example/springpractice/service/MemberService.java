@@ -1,14 +1,16 @@
 package com.example.springpractice.service;
 import com.example.springpractice.domain.Member;
 import com.example.springpractice.repository.MemberRepository;
-import com.example.springpractice.repository.MemoryMemberRespository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
+
 
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;

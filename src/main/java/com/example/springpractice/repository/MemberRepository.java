@@ -1,7 +1,5 @@
 package com.example.springpractice.repository;
-
 import com.example.springpractice.domain.Member;
-
 import java.util.List;
 import java.util.Optional;
 
